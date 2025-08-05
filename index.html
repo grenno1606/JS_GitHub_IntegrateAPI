@@ -5,52 +5,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="./dist/style.css">
 </head>
 
-<body>
-  <header>
-    <h1>devfinder</h1>
-    <button>DARK <img src="./assets/images/icon-moon.svg" alt=""></button>
-    <button>LIGHT <img src="./assets/images/icon-sun.svg" alt=""></button>
+<body class="container">
+  <header class="header">
+    <h1 class="header__logo">devfinder</h1>
+    <button class="header__button button button--ghost">DARK <img class="button__icon" src="./assets/images/icon-moon.svg" alt=""></button>
   </header>
-  <main>
-    <div><img src="./assets/images/icon-search.svg" alt=""><input type="text" placeholder="Search GitHub username..."><button>Search</button></div>
-    <div>
-      <div><img src="./assets/images/user-avatar.png" alt=""></div>
-      <div>
-        <h2>The Octocat</h2>
-        <a href="">@octocat</a>
-        <p>Joined 26 Jan 2011</p>
+  <main class="home">
+    <div class="home__search search-form"><img class="search-form__icon" src="./assets/images/icon-search.svg" alt=""><input class="search-form__input" type="text" placeholder="Search GitHub username..."><button class="button button--primary search-form__button">Search</button></div>
+    <article class="home__card card">
+      <div class="card__info">
+        <img class="card__avatar" src="./assets/images/user-avatar.png" alt="">
+        <div class="card__group">
+          <div>
+            <h2 class="card__name">The Octocat</h2>
+            <a href="" class="card__username">@octocat</a>
+          </div>
+          <p class="card__date">Joined 26 Jan 2011</p>
+        </div>
       </div>
-    </div>
-    <p>This profile has no bio</p>
-    <div>
-      <div>
-        <p>Repos</p>
-        <p>8</p>
+      <p class="card__bio">This profile has no bio</p>
+      <div class="card__profile profile-stats">
+        <div class="profile-stats__item profile-stats__item--repos">
+          <p class="profile-stats__label">Repos</p>
+          <p class="profile-stats__number">8</p>
+        </div>
+        <div class="profile-stats__item profile-stats__item--followers">
+          <p class="profile-stats__label">Followers</p>
+          <p class="profile-stats__number">18855</p>
+        </div>
+        <div class="profile-stats__item profile-stats__item--following">
+          <p class="profile-stats__label">Following</p>
+          <p class="profile-stats__number">9</p>
+        </div>
       </div>
-      <div>
-        <p>Followers</p>
-        <p>18855</p>
+      <div class="card__links profile-links">
+        <div class="profile-links__item profile-links__item--location"><img class="profile-links__icon" src="./assets/images/icon-location.svg" alt="">
+          <p class="profile-links__text">San Francisco</p>
+        </div>
+        <div class="profile-links__item profile-links__item--twitter"><img class="profile-links__icon" src="./assets/images/icon-twitter.svg" alt="">
+          <p class="profile-links__text">Not Available</p>
+        </div>
+        <div class="profile-links__item profile-links__item--blog"><img class="profile-links__icon" src="./assets/images/icon-website.svg" alt="">
+          <p class="profile-links__text">https://github.blog</p>
+        </div>
+        <div class="profile-links__item profile-links__item--company"><img class="profile-links__icon" src="./assets/images/icon-company.svg" alt="">
+          <p class="profile-links__text">@github</p>
+        </div>
       </div>
-      <div>
-        <p>Following</p>
-        <p>9</p>
-      </div>
-    </div>
-    <div><img src="./assets/images/icon-location.svg" alt="">
-      <p>San Francisco</p>
-    </div>
-    <div><img src="./assets/images/icon-website.svg" alt="">
-      <p>https://github.blog</p>
-    </div>
-    <div><img src="./assets/images/icon-twitter.svg" alt="">
-      <p>Not Available</p>
-    </div>
-    <div><img src="./assets/images/icon-company.svg" alt="">
-      <p>@github</p>
-    </div>
+    </article>
   </main>
 </body>
+<script src="./js/main.js"></script>
 
 </html>

@@ -1,0 +1,64 @@
+.button {
+  border: none;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 1px 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: $font-space-mono;
+
+  &--primary {
+    background-color: $blue;
+    color: $white;
+    border-radius: 10px;
+    width: 84px;
+    height: 38.4px;
+    &:hover {
+      background-color: $blue-light;
+    }
+  }
+
+  &--ghost {
+    display: unset;
+    background-color: transparent;
+    color: $gray-blue-dark;
+    letter-spacing: 2.5px;
+
+    &:hover {
+      color: hsla(220, 18%, 16%, 1);
+      filter: invert(0.6) sepia(2) saturate(100) hue-rotate(180deg)
+        brightness(60%);
+    }
+  }
+
+  &__icon {
+    display: inline;
+    position: relative;
+    top: 3.2px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+body.dark-theme {
+  .button {
+    color: $white;
+
+    &--ghost {
+      &:hover {
+        color: hsl(var(--clr-marine));
+        filter: invert(0.6) sepia(2) saturate(50) hue-rotate(180deg)
+          brightness(90%);
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .button {
+    font-size: 16px;
+  }
+}
