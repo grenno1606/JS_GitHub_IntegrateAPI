@@ -28,7 +28,7 @@
     letter-spacing: 2.5px;
 
     &:hover {
-      color: hsla(220, 18%, 16%, 1);
+      color: $toggle-hover;
       filter: invert(0.6) sepia(2) saturate(100) hue-rotate(180deg)
         brightness(60%);
     }
@@ -49,7 +49,7 @@ body.dark-theme {
 
     &--ghost {
       &:hover {
-        color: hsl(var(--clr-marine));
+        color: $gray-blue-dark;
         filter: invert(0.6) sepia(2) saturate(50) hue-rotate(180deg)
           brightness(90%);
       }

@@ -14,14 +14,19 @@
     <button class="header__button button button--ghost">DARK <img class="button__icon" src="./assets/images/icon-moon.svg" alt=""></button>
   </header>
   <main class="home">
-    <div class="home__search search-form"><img class="search-form__icon" src="./assets/images/icon-search.svg" alt=""><input class="search-form__input" type="text" placeholder="Search GitHub username..."><button class="button button--primary search-form__button">Search</button></div>
+    <div class="home__search search-form">
+      <img class="search-form__icon" src="./assets/images/icon-search.svg" alt="">
+      <input class="search-form__input" type="text" placeholder="Search GitHub username...">
+      <div class="search-form__message display-none">No results</div>
+      <button class="button button--primary search-form__button">Search</button>
+    </div>
     <article class="home__card card">
       <div class="card__info">
         <img class="card__avatar" src="./assets/images/user-avatar.png" alt="">
         <div class="card__group">
           <div>
             <h2 class="card__name">The Octocat</h2>
-            <a href="" class="card__username">@octocat</a>
+            <a href="" target="_blank" class="card__username">@octocat</a>
           </div>
           <p class="card__date">Joined 26 Jan 2011</p>
         </div>
@@ -58,6 +63,7 @@
     </article>
   </main>
 </body>
+
 <script src="./js/main.js"></script>
 
 </html>

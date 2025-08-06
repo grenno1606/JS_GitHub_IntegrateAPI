@@ -2,6 +2,22 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  &__item {
+    &--location {
+      order: 1;
+    }
+    &--twitter {
+      order: 3;
+    }
+    &--blog {
+      order: 2;
+    }
+    &--company {
+      order: 4;
+    }
+  }
+
   &__icon {
     position: relative;
     height: 20px;
@@ -14,9 +30,28 @@
   &__text {
     display: inline;
     position: relative;
-    left: 24px;
+    left: 14px;
     top: 8px;
     color: $gray-blue-dark;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.cursor-default {
+  cursor: unset !important;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.profile-links__item.opacity {
+  .profile-links__icon,
+  .profile-links__text {
+    opacity: 0.5;
   }
 }
 
@@ -26,12 +61,10 @@ body.dark-theme {
       filter: invert(0.3) sepia(2) saturate(10) hue-rotate(180deg)
         brightness(900%);
     }
-    &__icon {
-      color: white;
-    }
 
+    &__icon,
     &__text {
-      color: white;
+      color: $white;
     }
   }
 }
@@ -47,13 +80,11 @@ body.dark-theme {
       width: 50%;
       position: relative;
       top: 24px;
-    }
-
-    &__text {
-      left: 14px;
-      cursor: pointer;
-      &:hover {
-        text-decoration: underline;
+      &--twitter {
+        order: 2;
+      }
+      &--blog {
+        order: 3;
       }
     }
   }

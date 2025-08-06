@@ -27,10 +27,7 @@
 body.dark-theme {
   .profile-stats {
     background-color: $background-dark;
-    &__label {
-      color: $white;
-    }
-
+    &__label,
     &__number {
       color: $white;
     }
