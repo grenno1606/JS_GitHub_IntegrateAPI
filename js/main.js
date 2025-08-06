@@ -60,7 +60,13 @@ function getOrDefault(value, defaultValue = "Not Available") {
   return value ? value : defaultValue;
 }
 
-function updateProfileLink(container, iconSrc, value, isLink = true) {
+function updateProfileLink(
+  container,
+  iconSrc,
+  value,
+  isLink = true,
+  isCompany = false
+) {
   const textContent = getOrDefault(value);
   if (!value) container.classList.add("opacity");
   else container.classList.remove("opacity");
@@ -73,7 +79,7 @@ function updateProfileLink(container, iconSrc, value, isLink = true) {
     container.innerHTML = `
     <img class="profile-links__icon" src="${iconSrc}" alt="">
     <a class="profile-links__text" target="_blank" href="${
-      value ? value : "#"
+      value ? (isCompany ? `https://github.com/${value.slice(1)}` : value) : "#"
     }">${textContent}</a>
   `;
   }
@@ -114,7 +120,13 @@ function renderUserProfile(data) {
     data.twitter_username
   );
   updateProfileLink(blog, "./assets/images/icon-website.svg", data.blog);
-  updateProfileLink(company, "./assets/images/icon-company.svg", data.company);
+  updateProfileLink(
+    company,
+    "./assets/images/icon-company.svg",
+    data.company,
+    true,
+    true
+  );
 }
 
 btnSearch.addEventListener("click", async () => {
