@@ -7,7 +7,6 @@ The **GitHub User Search App** is a responsive web application that enables user
 > **Demo Design:**  
 > [Carvalhovincent's GitHub User Search App](https://carvalhovincent.github.io/GitHub-user-search-app/)
 
----
 
 ## 🧩 Features
 
@@ -19,7 +18,6 @@ The **GitHub User Search App** is a responsive web application that enables user
 - **Clear Hover States:** All interactive elements have distinct hover effects.
 - **Smooth Transitions:** Seamless theme switching and UI animations.
 
----
 
 ## 🛠️ Technologies Used
 
@@ -34,7 +32,6 @@ The **GitHub User Search App** is a responsive web application that enables user
   - `fetch()` for API requests
   - DOM manipulation & event handling
 
----
 
 ## 📂 Project Structure
 
@@ -51,5 +48,3 @@ github-user-search-app/
 - **js/**: All script logic, including API calls and theme handling.
 - **assets/**: Images, SVGs, or icons.
 - **dist/**: Compiled CSS.
-
----
