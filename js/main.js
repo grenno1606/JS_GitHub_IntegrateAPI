@@ -39,7 +39,9 @@ const blog = document.querySelector(".profile-links__item--blog");
 const company = document.querySelector(".profile-links__item--company");
 
 async function getUserInfo(username = "Octocat") {
-  const response = await fetch(`https://api.github.com/users/${username}`);
+  const response = await fetch(
+    `https://api.github.com/users/${username.trim()}`
+  );
   if (!response.ok) {
     throw new Error("Failed to fetch user info");
   }
@@ -148,3 +150,21 @@ async function main() {
 }
 
 main();
+
+function enableKeyboardClick(item) {
+  if (!item.hasAttribute("tabindex")) {
+    item.setAttribute("tabindex", "0");
+  }
+  if (!item.hasAttribute("role")) {
+    item.setAttribute("role", "button");
+  }
+  item.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      item.click();
+    }
+  });
+}
+
+enableKeyboardClick(btnSearch);
+enableKeyboardClick(toggleButton);

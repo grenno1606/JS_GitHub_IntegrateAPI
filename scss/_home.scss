@@ -2,7 +2,17 @@
   &__search {
     margin-top: 36px;
   }
+
   &__card {
+    padding: 32px 24px 64px;
     margin-top: 16px;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .home {
+    &__card {
+      padding: 32px 24px 88px;
+    }
   }
 }
